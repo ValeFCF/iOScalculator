@@ -9,8 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (nonatomic)NSInteger resultado;
 @property (nonatomic)NSInteger valor1;
 @property (nonatomic)NSInteger valor2;
+@property (nonatomic)NSInteger operacion;
+
 @end
 
 @implementation ViewController
@@ -21,9 +24,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    NSInteger webos = [self calcular:1 a:1 conOp:0];
-    
-   NSLog(@"String with one int %d",webos);
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,8 +33,67 @@
 }
 
 - (IBAction)bDivision:(id)sender {
+    
+   // if (self.valor1 == 0) {
+        self.valor1 = [self.tResultado.text intValue];
+        self.operacion = 3;
+        NSLog(@"valor1 %d",self.valor1);
+   // }
+    
     self.tResultado.text=@"/";
+    
 }
+
+- (IBAction)bMultiplicacion:(id)sender {
+   // if (self.valor1 == 0) {
+        self.valor1 = [self.tResultado.text intValue];
+        self.operacion = 2;
+        NSLog(@"valor1 %d",self.valor1);
+  //  }
+    
+    self.tResultado.text=@"*";
+}
+
+- (IBAction)bSuma:(id)sender {
+  //  if (self.valor1 == 0) {
+        self.valor1 = [self.tResultado.text intValue];
+        self.operacion = 0;
+        NSLog(@"valor1 %d",self.valor1);
+  //  }
+
+    self.tResultado.text=@"+";
+}
+
+- (IBAction)bResta:(id)sender {
+  //  if (self.valor1 == 0) {
+        self.valor1 = [self.tResultado.text intValue];
+        self.operacion = 1;
+        NSLog(@"valor1 %d",self.valor1);
+  //  }
+
+    self.tResultado.text=@"-";
+}
+
+- (IBAction)bIgual:(id)sender {
+    //NSInteger webos = [self calcular:1 a:1 conOp:0];
+    
+    // NSLog(@"String with one int %d",webos);
+   // if (self.valor2 == 0) {
+        self.valor2 = [self.tResultado.text intValue];
+        NSLog(@"valor2 %d",self.valor2);
+   // }
+    
+    self.resultado = [self calcular:self.valor1 a:self.valor2 conOp:self.operacion];
+
+    self.tResultado.text=@"=";
+    NSLog(@"resultado %d",self.resultado);
+    self.tHistorial.text = [NSString stringWithFormat: @"%d", (int)self.resultado];
+    
+   // self.valor1 = 0;
+   // self.valor2 = 0;
+    
+}
+
 -(int)calcular:(int)val1 a:(int)val2 conOp:(int)operacion{
     
     int resultado;
@@ -52,22 +111,6 @@
     return resultado;
 }
 
-- (IBAction)bMultiplicacion:(id)sender {
-    self.tResultado.text=@"*";
-}
-
-- (IBAction)bIgual:(id)sender {
-    self.tResultado.text=@"=";
-}
-
-
-- (IBAction)bSuma:(id)sender {
-    self.tResultado.text=@"+";
-}
-
-- (IBAction)bResta:(id)sender {
-    self.tResultado.text=@"-";
-}
 
 - (IBAction)bCero:(id)sender {
     self.tResultado.text=[self.tResultado.text stringByAppendingString:@"0" ];
