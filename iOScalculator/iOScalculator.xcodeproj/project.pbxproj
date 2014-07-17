@@ -199,6 +199,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Emmanuel Valentin Granados Lopez";
 				TargetAttributes = {
+					3B20B96A197710A00014A3E8 = {
+						DevelopmentTeam = 5AZ5756H56;
+					};
 					3B20B98B197710A00014A3E8 = {
 						TestTargetID = 3B20B96A197710A00014A3E8;
 					};
