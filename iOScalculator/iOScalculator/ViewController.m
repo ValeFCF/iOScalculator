@@ -9,7 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic)NSInteger valor1;
+@property (nonatomic)NSInteger valor2;
 @end
 
 @implementation ViewController
@@ -32,6 +33,7 @@
 }
 
 - (IBAction)bDivision:(id)sender {
+    self.tResultado.text=@"/";
 }
 -(int)calcular:(int)val1 a:(int)val2 conOp:(int)operacion{
     
@@ -51,48 +53,65 @@
 }
 
 - (IBAction)bMultiplicacion:(id)sender {
+    self.tResultado.text=@"*";
 }
 
 - (IBAction)bIgual:(id)sender {
+    self.tResultado.text=@"=";
 }
 
+
 - (IBAction)bSuma:(id)sender {
+    self.tResultado.text=@"+";
 }
 
 - (IBAction)bResta:(id)sender {
+    self.tResultado.text=@"-";
 }
 
 - (IBAction)bCero:(id)sender {
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"0" ];
 }
 
 - (IBAction)bNueve:(id)sender {
+   self.tResultado.text=[self.tResultado.text stringByAppendingString:@"9" ];
 }
 
 - (IBAction)bOcho:(id)sender {
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"8" ];
 }
 
 - (IBAction)bSiete:(id)sender {
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"7" ];
 }
 
 - (IBAction)bSeis:(id)sender {
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"6" ];
 }
 
 - (IBAction)bCinco:(id)sender {
+   self.tResultado.text=[self.tResultado.text stringByAppendingString:@"5" ];
 }
 
 - (IBAction)bCuatro:(id)sender {
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"4" ];
 }
 
 - (IBAction)bTres:(id)sender {
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"3" ];
 }
 
 - (IBAction)bDos:(id)sender {
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"2" ];
 }
 
 - (IBAction)bUno:(id)sender {
-    self.tResultado.text = @"Hola";
+    //Concatenacion.- string1 stringByAppendingString: string 2
+    self.tResultado.text=[self.tResultado.text stringByAppendingString:@"1" ];
+  //  self.tHistorial.text = @"Uno";
 }
 - (IBAction)bBorrar:(id)sender {
     self.tResultado.text = @"";
+    //self.tHistorial.text = @"";
 }
 @end
