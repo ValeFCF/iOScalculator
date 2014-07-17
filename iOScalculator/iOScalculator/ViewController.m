@@ -26,4 +26,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)bDivision:(id)sender {
+    
+}
+
+- (IBAction)bMultiplicacion:(id)sender {
+}
+
+- (IBAction)bIgual:(id)sender {
+}
+
+- (IBAction)bSuma:(id)sender {
+}
+
+- (IBAction)bResta:(id)sender {
+}
+
+- (IBAction)bCero:(id)sender {
+}
+
+- (IBAction)bNueve:(id)sender {
+}
+
+- (IBAction)bOcho:(id)sender {
+}
+
+- (IBAction)bSiete:(id)sender {
+}
+
+- (IBAction)bSeis:(id)sender {
+}
+
+- (IBAction)bCinco:(id)sender {
+}
+
+- (IBAction)bCuatro:(id)sender {
+}
+
+- (IBAction)bTres:(id)sender {
+}
+
+- (IBAction)bDos:(id)sender {
+}
+
+- (IBAction)bUno:(id)sender {
+    self.tResultado.text = @"Hola";
+}
+- (IBAction)bBorrar:(id)sender {
+    self.tResultado.text = @"";
+}
 @end
