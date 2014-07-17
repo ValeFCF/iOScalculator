@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface clase : NSObject
-//-(NSInteger)sumarValor1:(NSInteger) conValor2:(NSInteger);
+-(NSInteger)suma:(NSInteger) valor1 mas:(NSInteger)valor2;
 @end

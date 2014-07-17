@@ -9,5 +9,10 @@
 #import "clase.h"
 
 @implementation clase
-
+-(NSInteger)suma:(NSInteger)valor1 mas:(NSInteger)valor2{
+    
+    NSInteger resultado= valor1 + valor2;
+    
+    return resultado;
+}
 @end
