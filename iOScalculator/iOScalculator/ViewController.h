@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "clase.h"
 
 @interface ViewController : UIViewController
 - (IBAction)bBorrar:(id)sender;

@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
-
+#import "clase.h"
 @interface ViewController ()
 @property (nonatomic)NSInteger resultado;
 @property (nonatomic)NSInteger valor1;
 @property (nonatomic)NSInteger valor2;
 @property (nonatomic)NSInteger operacion;
+@property (strong,nonatomic)clase *varClase; //strong lo mantiene en memoria hasta que es seteado nil
 
 @end
 
@@ -39,8 +40,8 @@
         self.operacion = 3;
         NSLog(@"valor1 %d",self.valor1);
    // }
-    
-    self.tResultado.text=@"/";
+        self.tResultado.text=@"";
+  //  self.tResultado.text=@"/";
     
 }
 
@@ -50,8 +51,8 @@
         self.operacion = 2;
         NSLog(@"valor1 %d",self.valor1);
   //  }
-    
-    self.tResultado.text=@"*";
+        self.tResultado.text=@"";
+    //self.tResultado.text=@"*";
 }
 
 - (IBAction)bSuma:(id)sender {
@@ -61,7 +62,8 @@
         NSLog(@"valor1 %d",self.valor1);
   //  }
 
-    self.tResultado.text=@"+";
+    //self.tResultado.text=@"+";
+        self.tResultado.text=@"";
 }
 
 - (IBAction)bResta:(id)sender {
@@ -71,7 +73,8 @@
         NSLog(@"valor1 %d",self.valor1);
   //  }
 
-    self.tResultado.text=@"-";
+    //self.tResultado.text=@"-";
+        self.tResultado.text=@"";
 }
 
 - (IBAction)bIgual:(id)sender {
@@ -82,15 +85,53 @@
         self.valor2 = [self.tResultado.text intValue];
         NSLog(@"valor2 %d",self.valor2);
    // }
+    /************
+     *Utilizando un método interno
+     */
+//    self.resultado = [self calcular:self.valor1 a:self.valor2 conOp:self.operacion];
+//
+//    self.tResultado.text=@"=";
+//    NSLog(@"resultado %d",self.resultado);
+//    self.tHistorial.text = [NSString stringWithFormat: @"%d", (int)self.resultado];
     
-    self.resultado = [self calcular:self.valor1 a:self.valor2 conOp:self.operacion];
-
-    self.tResultado.text=@"=";
-    NSLog(@"resultado %d",self.resultado);
-    self.tHistorial.text = [NSString stringWithFormat: @"%d", (int)self.resultado];
     
    // self.valor1 = 0;
    // self.valor2 = 0;
+    
+    /************
+     *Utilizando un método de clase
+     */
+    NSInteger result;
+    self.varClase=[[clase alloc]init];
+    
+    
+    if (self.operacion == 0) {
+        //En java: varclase.suma(this.valor1,this.valor2);
+        result=[self.varClase suma:self.valor1 mas:self.valor2];
+    } else if (self.operacion == 1){
+        result=[self.varClase restar:self.valor1 menos:self.valor2];
+        //resultado = val1 - val2;
+    } else if (self.operacion == 2){
+        result=[self.varClase multiplicar:self.valor1 por:self.valor2];
+        //resultado = val1 * val2;
+    } else if (self.operacion == 3){
+        //resultado = val1 / val2;
+        if(self.valor2==0)
+        {
+            UIAlertView* alerta=[[UIAlertView alloc]initWithTitle:@"Error" message:@"La division por cero imposible de procesar" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Cancel", nil];
+            [alerta show];
+            result=0;
+
+        }
+        else
+        {
+            result=[self.varClase dividir:self.valor1 entre:self.valor2];
+            
+        }
+        
+    }
+    self.tHistorial.text=[NSString stringWithFormat:@"%d", result];
+
     
 }
 
@@ -155,6 +196,8 @@
 }
 - (IBAction)bBorrar:(id)sender {
     self.tResultado.text = @"";
-    //self.tHistorial.text = @"";
+    self.valor2=0;
+    self.valor1=0;
+    self.tHistorial.text = @"";
 }
 @end

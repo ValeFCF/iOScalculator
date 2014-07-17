@@ -15,4 +15,21 @@
     
     return resultado;
 }
+-(NSInteger)restar:(NSInteger)valor1 menos:(NSInteger)valor2{
+    NSInteger resultado= valor1 - valor2;
+    
+    return resultado;
+}
+-(NSInteger)multiplicar:(NSInteger)valor1 por:(NSInteger)valor2{
+    NSInteger resultado= valor1 * valor2;
+    
+    return resultado;
+}
+-(NSInteger)dividir:(NSInteger)valor1 entre:(NSInteger)valor2{
+    
+    NSInteger resultado= valor1 / valor2;
+    
+    return resultado;
+}
+
 @end
