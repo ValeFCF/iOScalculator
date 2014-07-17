@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    int webos = [calcular:1 a:1 conOp:0];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +30,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(int)calcular:(int)val1 a:(int)val2 conOp:(int)operacion{
+    
+    int resultado;
+    
+    if (operacion == 0) {
+        resultado = val1 + val2;
+    } else if (operacion == 1){
+        resultado = val1 - val2;
+    } else if (operacion == 2){
+        resultado = val1 * val2;
+    } else if (operacion == 3){
+        resultado = val1 / val2;
+    }
+    
+    return resultado;
+}
+
+
 
 @end

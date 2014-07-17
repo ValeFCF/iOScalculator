@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController
 
+-(int) calcular:(int)val1 a:(int)val2 conOp:(int)operacion;
+
 @end

@@ -376,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOScalculator/iOScalculator-Prefix.pch";
 				INFOPLIST_FILE = "iOScalculator/iOScalculator-Info.plist";
@@ -389,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOScalculator/iOScalculator-Prefix.pch";
 				INFOPLIST_FILE = "iOScalculator/iOScalculator-Info.plist";
@@ -456,6 +458,7 @@
 				3B20B99F197710A00014A3E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B20B9A0197710A00014A3E8 /* Build configuration list for PBXNativeTarget "iOScalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +467,7 @@
 				3B20B9A2197710A00014A3E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
