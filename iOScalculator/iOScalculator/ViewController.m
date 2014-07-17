@@ -20,9 +20,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    int webos = [calcular:1 a:1 conOp:0];
+    NSInteger webos = [self calcular:1 a:1 conOp:0];
     
-    
+   NSLog(@"String with one int %d",webos);
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,7 +31,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)bDivision:(id)sender {
+}
 -(int)calcular:(int)val1 a:(int)val2 conOp:(int)operacion{
     
     int resultado;
@@ -49,6 +50,49 @@
     return resultado;
 }
 
+- (IBAction)bMultiplicacion:(id)sender {
+}
 
+- (IBAction)bIgual:(id)sender {
+}
 
+- (IBAction)bSuma:(id)sender {
+}
+
+- (IBAction)bResta:(id)sender {
+}
+
+- (IBAction)bCero:(id)sender {
+}
+
+- (IBAction)bNueve:(id)sender {
+}
+
+- (IBAction)bOcho:(id)sender {
+}
+
+- (IBAction)bSiete:(id)sender {
+}
+
+- (IBAction)bSeis:(id)sender {
+}
+
+- (IBAction)bCinco:(id)sender {
+}
+
+- (IBAction)bCuatro:(id)sender {
+}
+
+- (IBAction)bTres:(id)sender {
+}
+
+- (IBAction)bDos:(id)sender {
+}
+
+- (IBAction)bUno:(id)sender {
+    self.tResultado.text = @"Hola";
+}
+- (IBAction)bBorrar:(id)sender {
+    self.tResultado.text = @"";
+}
 @end
