@@ -21,6 +21,7 @@
 		3B20B990197710A00014A3E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B20B972197710A00014A3E8 /* UIKit.framework */; };
 		3B20B998197710A00014A3E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B20B996197710A00014A3E8 /* InfoPlist.strings */; };
 		3B20B99A197710A00014A3E8 /* iOScalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20B999197710A00014A3E8 /* iOScalculatorTests.m */; };
+		497D73CA1977539F008CFF64 /* clase.m in Sources */ = {isa = PBXBuildFile; fileRef = 497D73C91977539F008CFF64 /* clase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		3B20B995197710A00014A3E8 /* iOScalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOScalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		3B20B997197710A00014A3E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B20B999197710A00014A3E8 /* iOScalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOScalculatorTests.m; sourceTree = "<group>"; };
+		497D73C81977539F008CFF64 /* clase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clase.h; sourceTree = "<group>"; };
+		497D73C91977539F008CFF64 /* clase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		3B20B974197710A00014A3E8 /* iOScalculator */ = {
 			isa = PBXGroup;
 			children = (
+				497D73C719775387008CFF64 /* Calculo */,
 				3B20B97D197710A00014A3E8 /* AppDelegate.h */,
 				3B20B97E197710A00014A3E8 /* AppDelegate.m */,
 				3B20B980197710A00014A3E8 /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				3B20B996197710A00014A3E8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		497D73C719775387008CFF64 /* Calculo */ = {
+			isa = PBXGroup;
+			children = (
+				497D73C81977539F008CFF64 /* clase.h */,
+				497D73C91977539F008CFF64 /* clase.m */,
+			);
+			name = Calculo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +267,7 @@
 			files = (
 				3B20B985197710A00014A3E8 /* ViewController.m in Sources */,
 				3B20B97F197710A00014A3E8 /* AppDelegate.m in Sources */,
+				497D73CA1977539F008CFF64 /* clase.m in Sources */,
 				3B20B97B197710A00014A3E8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,10 +394,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOScalculator/iOScalculator-Prefix.pch";
 				INFOPLIST_FILE = "iOScalculator/iOScalculator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -394,10 +410,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOScalculator/iOScalculator-Prefix.pch";
 				INFOPLIST_FILE = "iOScalculator/iOScalculator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
