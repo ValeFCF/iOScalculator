@@ -28,4 +28,6 @@
 - (IBAction)bUno:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *tResultado;
 
+-(int) calcular:(int)val1 a:(int)val2 conOp:(int)operacion;
+
 @end

@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSInteger webos = [self calcular:1 a:1 conOp:0];
+    
+   NSLog(@"String with one int %d",webos);
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,7 +32,22 @@
 }
 
 - (IBAction)bDivision:(id)sender {
+}
+-(int)calcular:(int)val1 a:(int)val2 conOp:(int)operacion{
     
+    int resultado;
+    
+    if (operacion == 0) {
+        resultado = val1 + val2;
+    } else if (operacion == 1){
+        resultado = val1 - val2;
+    } else if (operacion == 2){
+        resultado = val1 * val2;
+    } else if (operacion == 3){
+        resultado = val1 / val2;
+    }
+    
+    return resultado;
 }
 
 - (IBAction)bMultiplicacion:(id)sender {
